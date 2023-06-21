@@ -11,7 +11,7 @@ class Home extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
+    final _size = MediaQuery.sizeOf(context);
     return Stack(
       children: <Widget>[
         Container(

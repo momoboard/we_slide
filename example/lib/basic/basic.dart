@@ -13,7 +13,7 @@ class _BasicState extends State<Basic> {
   Widget build(BuildContext context) {
     final _colorScheme = Theme.of(context).colorScheme;
     final double _panelMinSize = 130.0;
-    final double _panelMaxSize = MediaQuery.of(context).size.height;
+    final double _panelMaxSize = MediaQuery.sizeOf(context).height;
     final _controller = WeSlideController();
     final _footerController = WeSlideController(initial: true);
 

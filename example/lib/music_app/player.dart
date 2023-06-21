@@ -13,18 +13,18 @@ class _PlayerState extends State<Player> {
   @override
   Widget build(BuildContext context) {
     final textTheme = Theme.of(context).textTheme;
-    final cardSize = MediaQuery.of(context).size.height * 0.4;
+    final cardSize = MediaQuery.sizeOf(context).height * 0.4;
     return Material(
       child: SingleChildScrollView(
         physics: BouncingScrollPhysics(),
         child: Stack(
           children: <Widget>[
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.sizeOf(context).height,
               color: Color(0xFF57D780),
             ),
             Container(
-              height: MediaQuery.of(context).size.height,
+              height: MediaQuery.sizeOf(context).height,
               decoration: BoxDecoration(
                 gradient: LinearGradient(
                   colors: [
@@ -41,13 +41,13 @@ class _PlayerState extends State<Player> {
               child: Column(
                 children: <Widget>[
                   Container(
-                    height: MediaQuery.of(context).size.height - 150,
+                    height: MediaQuery.sizeOf(context).height - 150,
                     child: Stack(
                       children: <Widget>[
                         Column(
                           children: <Widget>[
                             SizedBox(
-                                height: MediaQuery.of(context).padding.top),
+                                height: MediaQuery.paddingOf(context).top),
                             // Header
                             Padding(
                               padding:

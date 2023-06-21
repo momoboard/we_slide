@@ -17,7 +17,7 @@ class _MusicAppState extends State<MusicApp> {
   Widget build(BuildContext context) {
     final WeSlideController _controller = WeSlideController();
     final double _panelMinSize = 127.0;
-    final double _panelMaxSize = MediaQuery.of(context).size.height;
+    final double _panelMaxSize = MediaQuery.sizeOf(context).height;
 
     return Scaffold(
       body: WeSlide(

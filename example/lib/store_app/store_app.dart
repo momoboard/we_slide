@@ -14,7 +14,7 @@ class StoreApp extends StatefulWidget {
 class _StoreAppState extends State<StoreApp> {
   @override
   Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
+    final _size = MediaQuery.sizeOf(context);
     final _controller = WeSlideController();
     return Scaffold(
       body: WeSlide(

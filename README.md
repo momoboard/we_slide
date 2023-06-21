@@ -44,7 +44,7 @@ import 'package:we_slide/we_slide.dart';
 
 final _colorScheme = Theme.of(context).colorScheme;
 final double _panelMinSize = 70.0;
-final double _panelMaxSize = MediaQuery.of(context).size.height / 2;
+final double _panelMaxSize = MediaQuery.sizeOf(context).height / 2;
 return Scaffold(
   backgroundColor: Colors.black,
   body: WeSlide(
@@ -82,13 +82,13 @@ There are many options that you can change:
 |`panel`|`widget`| This is the widget that will slide over the `Body`. You can fit any widget.|
 |`panelHeader`|`widget`| This is the header that will be over the `Panel`. You can fit any widget. |
 |`panelMinSize`|`double`|This is the initial value that set the `panel` min height. If the value is greater than 0, `panel` will be this size over `body`. By default is `150.0`. Set `0.0` if you want to hide `Panel`|
-|`panelMaxSize`|`double`|This is the value that set the `panel` max height. When slide up the `panel`, this value define the max height that `panel` will be over `Body`. By default is `400.0` if you want that panel cover the whole `Body`, set with `MediaQuery.of(context).size.height`|
-|`panelWidth`|`double`|This is the value that set the `panel` width, by default is `MediaQuery.of(context).size.width`|
+|`panelMaxSize`|`double`|This is the value that set the `panel` max height. When slide up the `panel`, this value define the max height that `panel` will be over `Body`. By default is `400.0` if you want that panel cover the whole `Body`, set with `MediaQuery.sizeOf(context).height`|
+|`panelWidth`|`double`|This is the value that set the `panel` width, by default is `MediaQuery.sizeOf(context).width`|
 |`panelBorderRadiusBegin`|`double`| Set this value to create a border radius over `panel`. When `panelBorderRadiusBegin` is diffrent from `panelBorderRadiusEnd` and the `panel` is slide up, this create an animation border over `panel`. By default is `0.0`|
 |`panelBorderRadiusEnd`|`double`|Set this value to create a border radius over `panel`. When `panelBorderRadiusBegin` is diffrent from `panelBorderRadiusEnd` and the `panel` is slide up, this create an animation border over `panel`. By default is `0.0`|
 |`bodyBorderRadiusBegin`|`double`|Set this value to create a border radius over `body`. When `bodyBorderRadiusBegin` is diffrent from `bodyBorderRadiusEnd` and the `panel` is slide up, this create an animation border over `body`. By default is `0.0`|
 |`bodyBorderRadiusEnd`|`double`|Set this value to create a border radius over `body`. When `bodyBorderRadiusBegin` is diffrent from `bodyBorderRadiusEnd` and the `panel` is slide up, this create an animation border over `body`. By default is `0.0`|
-|`bodyWidth`|`double`|This is the value that set the `body` width. By default is `MediaQuery.of(context).size.width`|
+|`bodyWidth`|`double`|This is the value that set the `body` width. By default is `MediaQuery.sizeOf(context).width`|
 |`parallaxOffset`|`double`|Set this value to create a `parallax` effect when the `panel` is slide up. By default is `0.1`|
 |`footerHeight`|`double`|This is the value that set the footer height. by default is `60.0`|
 |`appBarHeight`|`double`|This is the value that set the appbar height. by default is `80.0`|

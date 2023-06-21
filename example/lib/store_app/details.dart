@@ -11,7 +11,7 @@ class Details extends StatefulWidget {
 class _DetailsState extends State<Details> {
   @override
   Widget build(BuildContext context) {
-    final _size = MediaQuery.of(context).size;
+    final _size = MediaQuery.sizeOf(context);
     final _colorTheme = Theme.of(context).colorScheme;
     return Container(
       padding: EdgeInsets.all(20),

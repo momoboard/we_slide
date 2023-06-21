@@ -17,7 +17,7 @@ class PlaylistItem extends StatefulWidget {
 class _PlaylistItemState extends State<PlaylistItem> {
   @override
   Widget build(BuildContext context) {
-    final size = MediaQuery.of(context).size;
+    final size = MediaQuery.sizeOf(context);
     final colorTheme = Theme.of(context).colorScheme;
     return Container(
       width: size.width,

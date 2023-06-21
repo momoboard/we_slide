@@ -35,11 +35,11 @@ class WeSlide extends StatefulWidget {
   /// When slide up the panel this value define the max height
   /// that panel will be over [Body]. By default is [400.0]
   /// if you want that panel cover the whole [Body], set with
-  /// MediaQuery.of(context).size.height
+  /// MediaQuery.sizeOf(context).height
   final double panelMaxSize;
 
   /// This is the value that set the panel width
-  /// by default is MediaQuery.of(context).size.width
+  /// by default is MediaQuery.sizeOf(context).width
   final double? panelWidth;
 
   /// Set this value to create a border radius over Panel.
@@ -67,7 +67,7 @@ class WeSlide extends StatefulWidget {
   final double bodyBorderRadiusEnd;
 
   /// This is the value that set the body width.
-  /// By default is MediaQuery.of(context).size.width
+  /// By default is MediaQuery.sizeOf(context).width
   final double? bodyWidth;
 
   /// Set this value to create a parallax effect when the panel is slide up.
@@ -449,8 +449,8 @@ class _WeSlideState extends State<WeSlide> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     //Get MediaQuery Sizes
-    final _height = MediaQuery.of(context).size.height;
-    final _width = MediaQuery.of(context).size.width;
+    final _height = MediaQuery.sizeOf(context).height;
+    final _width = MediaQuery.sizeOf(context).width;
 
     return Container(
       height: _height,
@@ -592,7 +592,7 @@ class _WeSlideState extends State<WeSlide> with TickerProviderStateMixin {
                     return Positioned(
                       height: widget.footerHeight,
                       bottom: _getFooterOffset(),
-                      width: MediaQuery.of(context).size.width,
+                      width: MediaQuery.sizeOf(context).width,
                       child: widget.footer!,
                     );
                   },
